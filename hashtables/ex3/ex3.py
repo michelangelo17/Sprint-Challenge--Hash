@@ -1,15 +1,18 @@
 def intersection(arrays):
     result = []
     arr_dict = {}
+
     for i in arrays:
         for j in i:
             if j in arr_dict:
                 arr_dict[j] += 1
             else:
                 arr_dict[j] = 1
+
     for key in arr_dict.keys():
         if arr_dict[key] == len(arrays):
             result.append(key)
+
     return result
 
 
